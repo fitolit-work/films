@@ -30,7 +30,7 @@ function start() {
 function rememberMyFilms(quantityQuestions) {
     for (let i = 0; i < quantityQuestions; i++) {
         do {
-            filmName = prompt('Один из последних просмотренных фильмов?');
+            filmName = prompt('Один из последних просмотренных фильмов?').trim();
         } while (filmName == '' || filmName == null || filmName.length > 50);
         
         do {
@@ -60,6 +60,6 @@ function showMyDB(hiden) {
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
-        personalMovieDB.genres.push(prompt(`Ваш любимый жанр под номером ${i}`));
+        personalMovieDB.genres.push(prompt(`Ваш любимый жанр под номером ${i}`).trim());
     }
 }
